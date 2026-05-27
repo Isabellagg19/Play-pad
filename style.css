@@ -1,5 +1,5 @@
 body {
-    background-color: beige;
+    background-color: rgba(169, 181, 235, 0.849);
     height: 100%;
     width: 100%;
     display: flex;
@@ -12,6 +12,40 @@ body {
 
 h1 {
     font-family: "Barrio", system-ui;
-    font-size: 40px;
-    letter-spacing: 8px;
+    font-size: 50px;
+    letter-spacing: 10px;
+}
+
+.pad {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    margin: 10px 0;
+    user-select: none;
+    box-shadow: 0 8px 6px -6px rgb(24, 26, 37);
+    background-color: rgba(52, 74, 116, 0.904);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: rgb(30, 31, 41);
+    border: 4px solid;
+}
+
+.box:hover {
+    background-color: rgba(44, 65, 102, 0.788);
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+.box:active {
+    background-color: rgb(30, 34, 85);
+    transform: scale(1.1);
+    transition: all 0.3s;
 }
