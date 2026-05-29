@@ -25,3 +25,32 @@ function triggerRipple(pad, e) {
 document.querySelectorAll('.box').forEach(pad => {
   pad.addEventListener('click', e => triggerRipple(pad, e));
 });
+
+const keyMap = {
+    'c': 'C',
+    'd': 'D',
+    'e': 'E',
+    'f': 'F',
+    'g': 'G',
+    'a': 'A',
+    'b': 'B',
+    'q': 'SE1',
+    'w': 'SE2',
+    'r': 'SE3',
+    't': 'SE4',
+    'y': 'M1',
+    'u': 'M2',
+    'i': 'M3',
+    'o': 'M4',
+    'p': 'M5'
+};
+
+document.addEventListener('keydown', (e) => {
+    const note = keyMap[e.key.toLowerCase()];
+    if (!note) return;
+
+    const pad =document.querySelector(`[data-note="${note}"]`);
+    if (!pad) return;
+
+    pad.click();
+});

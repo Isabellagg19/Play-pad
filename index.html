@@ -8,27 +8,28 @@
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Barrio&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <h1>Play Pad</h1>
     <div class="pad">
-        <div class="box a" onclick="play ('do.mp3')">C</div>
-        <div class="box a" onclick="play ('re.mp3')">D</div>
-        <div class="box a" onclick="play ('mi.mp3')">E</div>
-        <div class="box a" onclick="play ('fa.mp3')">F</div>
-        <div class="box a" onclick="play ('sol.mp3')">G</div>
-        <div class="box a" onclick="play ('la.mp3')">A</div>
-        <div class="box a" onclick="play ('si.mp3')">B</div>
-        <div class="box b" onclick="play ('sound-effect0.mp3')">SE1</div>
-        <div class="box b" onclick="play ('sound-effect1.mp3')">SE2</div>
-        <div class="box b" onclick="play('sound-effect2.mp3')">SE3</div>
-        <div class="box b" onclick="play('sound-effect3.mp3')">SE4</div>
-        <div class="box c" onclick="play('melody1.mp3')">M1</div>
-        <div class="box c" onclick="play('melody2.mp3')">M2</div>
-        <div class="box c" onclick="play('melody3.mp3')">M3</div>
-        <div class="box c" onclick="play('melody4.mp3')">M4</div>
-        <div class="box c" onclick="play('melody5.mp3')">M5</div>
+        <div class="box a" data-note="C" onclick="play ('do.mp3')">C <span class="key-label">C</span></div>
+        <div class="box a" data-note="D"onclick="play ('re.mp3')">D <span class="key-label">D</span></div>
+        <div class="box a" data-note="E" onclick="play ('mi.mp3')">E <span class="key-label">E</span></div>
+        <div class="box a" data-note="F" onclick="play ('fa.mp3')">F <span class="key-label">F</span></div>
+        <div class="box a" data-note="G" onclick="play ('sol.mp3')">G <span class="key-label">G</span></div>
+        <div class="box a" data-note="A" onclick="play ('la.mp3')">A <span class="key-label">A</span></div>
+        <div class="box a" data-note="B" onclick="play ('si.mp3')">B <span class="key-label">B</span></div>
+        <div class="box b" data-note="SE1" onclick="play ('sound-effect0.mp3')">SE1 <span class="key-label">Q</span></div>
+        <div class="box b" data-note="SE2" onclick="play ('sound-effect1.mp3')">SE2 <span class="key-label">W</span></div>
+        <div class="box b" data-note="SE3" onclick="play('sound-effect2.mp3')">SE3 <span class="key-label">R</span></div>
+        <div class="box b" data-note="SE4" onclick="play('sound-effect3.mp3')">SE4 <span class="key-label">T</span></div>
+        <div class="box c" data-note="M1" onclick="play('melody1.mp3')">M1 <span class="key-label">Y</span></div>
+        <div class="box c" data-note="M2" onclick="play('melody2.mp3')">M2 <span class="key-label">U</span></div>
+        <div class="box c" data-note="M3" onclick="play('melody3.mp3')">M3 <span class="key-label">I</span></div>
+        <div class="box c" data-note="M4" onclick="play('melody4.mp3')">M4 <span class="key-label">O</span></div>
+        <div class="box c" data-note="M5" onclick="play('melody5.mp3')">M5 <span class="key-label">P</span></div>
     </div>
 
     <script src="script.js"></script>
