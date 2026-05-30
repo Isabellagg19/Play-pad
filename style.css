@@ -11,8 +11,8 @@ body {
 
 
 h1 {
-    font-family: "Barrio", system-ui;
-    font-size: 50px;
+    font-family: "tropiLand", sans-serif;
+    font-size: 70px;
     letter-spacing: 10px;
 }
 
@@ -109,4 +109,9 @@ h1 {
   font-size: 13px;
   opacity: 0.7;
   font-family: "Assistant", sans-serif;
+}
+
+@font-face {
+    font-family:"tropiLand";
+    src: url("fonts/Tropi\ Land\ -\ \(Demo\)\ hanscostudio.com.ttf") format("truetype");
 }
