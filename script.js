@@ -1,7 +1,15 @@
 function play(link) {
+  function playSound(note) {
 let audio = new Audio(link);
 audio.load();
 audio.play();
+if (isRecording) {
+    sequence.push({
+      nota: note,
+      tiempo: Date.now() - recordingStart
+    });
+  }
+}
 }
 
 function triggerRipple(pad, e) {
@@ -54,3 +62,9 @@ document.addEventListener('keydown', (e) => {
 
     pad.click();
 });
+
+let isRecording = false;
+let isPlaying = false;
+let recordingStart= null;
+let sequence = [];
+let playbackTimers = [];
