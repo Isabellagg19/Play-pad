@@ -159,13 +159,16 @@ h1 {
     src: url("fonts/KGPerfectPenmanship.ttf") format("truetype");
 }
 
+
 .btn-rec {
+    font-family: "perfect", sans-serif;
     display: inline-block;
+    gap: 20px;
     font-size: 15px;
     font-weight: 400;
-    background-color: #9be8eeb0;
+    background-color: #9beee4b0;
     color: #000000;
-    border-radius: 50px;
+    border-radius: 5px;
     cursor: pointer;
     padding: 10px 15px;  
     margin-bottom: 20px;

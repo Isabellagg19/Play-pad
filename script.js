@@ -71,7 +71,7 @@ function startRecording() {
   sequence = [];
   isRecording = true;
   recordingStart = Date.now();
-  document.getElementById('btn-rec').style.background = '#e05555';
+  document.getElementById('btn-rec').style.background = '#c74c4cd4';
 }
 
 function stopRecording() {
@@ -82,6 +82,7 @@ function stopRecording() {
 function playSequence() {
   if (sequence.length === 0) return;{
   if (isPlaying) stopPlayback();
+  document.getElementById('btn-play').style.background = '#c74c4cd4';
 
   isPlaying = true;
 
@@ -103,4 +104,3 @@ function stopPlayback() {
   playbackTimers = [];
   isPlaying = false;
 }
-  }
