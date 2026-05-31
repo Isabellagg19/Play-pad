@@ -13,12 +13,14 @@
 
 <body>
     <h1>Play Pad</h1>
-    <div class="pad">
 
+    <div class="controls">
         <button id="btn-rec" class="btn-rec" onclick="startRecording()">REC</button>
         <button id="btn-stop" class="btn-rec" onclick="stopRecording()">STOP</button>
         <button id="btn-play" class="btn-rec" onclick="playSequence()">PLAY</button>
         <button id="btn-stop-play" class="btn-rec" onclick="stopPlayback()">STOP PLAY</button>
+    </div>
+    <div class="pad">
 
         <div class="tooltip">
         <div class="box a" data-note="C" onclick="play ('music-notes/do.mp3', this)">C <span class="key-label">C</span></div>
