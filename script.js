@@ -1,14 +1,19 @@
-function play(link) {
-  function playSound(note) {
+let isRecording = false;
+let isPlaying = false;
+let recordingStart= null;
+let sequence = [];
+let playbackTimers = [];
+
+function play(link, pad) {
 let audio = new Audio(link);
 audio.load();
 audio.play();
+
 if (isRecording) {
-    sequence.push({
-      nota: note,
-      tiempo: Date.now() - recordingStart
-    });
-  }
+  sequence.push({
+    pad: pad,
+    time: Date.now() - recordingStart
+  });
 }
 }
 
@@ -54,17 +59,48 @@ const keyMap = {
 };
 
 document.addEventListener('keydown', (e) => {
+  if (e.repeat) return;
     const note = keyMap[e.key.toLowerCase()];
     if (!note) return;
 
     const pad =document.querySelector(`[data-note="${note}"]`);
-    if (!pad) return;
-
-    pad.click();
+    if (pad) pad.click();
 });
 
-let isRecording = false;
-let isPlaying = false;
-let recordingStart= null;
-let sequence = [];
-let playbackTimers = [];
+function startRecording() {
+  sequence = [];
+  isRecording = true;
+  recordingStart = Date.now();
+  document.getElementById('btn-rec').style.background = '#e05555';
+}
+
+function stopRecording() {
+  isRecording = false;
+  document.getElementById('btn-rec').style.background = '';
+}
+
+function playSequence() {
+  if (sequence.length === 0) return;{
+  if (isPlaying) stopPlayback();
+
+  isPlaying = true;
+
+  sequence.forEach(event => {
+    const timer = setTimeout(() => {
+      event.pad.click();
+    }, event.time);
+
+    playbackTimers.push(timer);
+  });
+
+  const duration = sequence[sequence.length - 1].time + 500;
+  const finalTimer = setTimeout(() => { isPlaying = false;}, duration);
+  playbackTimers.push(finalTimer);
+}
+
+function stopPlayback() {
+  playbackTimers.forEach(t => clearTimeout(t));
+  playbackTimers = [];
+  isPlaying = false;
+}
+  }
