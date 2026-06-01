@@ -3,11 +3,13 @@ let isPlaying = false;
 let recordingStart= null;
 let sequence = [];
 let playbackTimers = [];
+let activeAudios = [];
 
 function play(link, pad) {
 let audio = new Audio(link);
 audio.load();
 audio.play();
+ activeAudios.push(audio); 
 
 if (isRecording) {
   sequence.push({
@@ -71,18 +73,18 @@ function startRecording() {
   sequence = [];
   isRecording = true;
   recordingStart = Date.now();
-  document.getElementById('btn-rec').style.background = '#c74c4cd4';
+  document.getElementById('btn-rec').classList.add('recording');;
 }
 
 function stopRecording() {
   isRecording = false;
-  document.getElementById('btn-rec').style.background = '';
+  document.getElementById('btn-rec').classList.remove('recording');
 }
 
 function playSequence() {
-  if (sequence.length === 0) return;{
+  if (sequence.length === 0) return;
   if (isPlaying) stopPlayback();
-  document.getElementById('btn-play').style.background = '#c74c4cd4';
+  document.getElementById('btn-play').classList.add('playing');
 
   isPlaying = true;
 
@@ -102,5 +104,13 @@ function playSequence() {
 function stopPlayback() {
   playbackTimers.forEach(t => clearTimeout(t));
   playbackTimers = [];
+  
+    activeAudios.forEach(audio => {
+    audio.pause();
+    audio.currentTime = 0;
+  });
+  activeAudios = [];
+
   isPlaying = false;
+  document.getElementById('btn-play').classList.remove('playing');
 }
