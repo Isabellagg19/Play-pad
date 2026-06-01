@@ -13,12 +13,13 @@
 
 <body>
     <h1>Play Pad</h1>
-
+    <p class="instructions">Click the pad buttons, make mixes with different sounds and then record your sequence, to create your own unique compositions!</p>
     <div class="controls">
-        <button id="btn-rec" class="btn-rec" onclick="startRecording()">REC</button>
-        <button id="btn-stop" class="btn-rec" onclick="stopRecording()">STOP</button>
-        <button id="btn-play" class="btn-rec" onclick="playSequence()">PLAY</button>
-        <button id="btn-stop-play" class="btn-rec" onclick="stopPlayback()">STOP PLAY</button>
+        <p class="start-info">Recording buttons</p>
+        <button id="btn-rec" class="btn r" onclick="startRecording()">REC</button>
+        <button id="btn-stop" class="btn s" onclick="stopRecording()">STOP</button>
+        <button id="btn-play" class="btn p" onclick="playSequence()">PLAY</button>
+        <button id="btn-stop-play" class="btn sp" onclick="stopPlayback()">STOP PLAY</button>
     </div>
     <div class="pad">
 
@@ -100,6 +101,10 @@
         <div class="tooltip">
         <div class="box c" data-note="M5" onclick="play('melody/melody5.mp3', this)">M5 <span class="key-label">P</span></div>
         <span class="tooltip-text">Melody 5</span>
+        </div>
+
+        <div class="note-container">
+        <p class="note">Editor note: You can also play the melodies using your keyboard!!!, just follow the key labels on each button <span class="strong">which are the small letters with this same font in the corner of each button.</span></p>
         </div>
     </div>
 
