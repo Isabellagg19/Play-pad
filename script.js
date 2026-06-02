@@ -115,13 +115,15 @@ function stopPlayback() {
   document.getElementById('btn-play').classList.remove('playing');
 }
 
-const colors = [
-    'rgba(166, 207, 247, 0.76)',
-    'rgba(241, 165, 211, 0.76)',
-    'rgba(244, 179, 157, 0.77)',
-    'rgba(162, 244, 182, 0.78)'
+const background = [
+  'url("backgrounds/background1.jpg")',
+  'url("backgrounds/background2.jpg")',
+  'url("backgrounds/background3.png")',
+  'url("backgrounds/background4.jpg")',
+  'url("backgrounds/background5.jpg")',
+  'url("backgrounds/background6.jpg")'
 ];
-const aleatoryColor = colors[Math.floor(Math.random() * colors.length)];
-document.body.style.backgroundColor = aleatoryColor;
+const aleatoryBackground = background[Math.floor(Math.random() * background.length)];
+document.body.style.backgroundImage = aleatoryBackground;
 
 
