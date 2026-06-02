@@ -114,3 +114,14 @@ function stopPlayback() {
   isPlaying = false;
   document.getElementById('btn-play').classList.remove('playing');
 }
+
+const colors = [
+    'rgba(166, 207, 247, 0.76)',
+    'rgba(241, 165, 211, 0.76)',
+    'rgba(244, 179, 157, 0.77)',
+    'rgba(162, 244, 182, 0.78)'
+];
+const aleatoryColor = colors[Math.floor(Math.random() * colors.length)];
+document.body.style.backgroundColor = aleatoryColor;
+
+
