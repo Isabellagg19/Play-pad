@@ -367,3 +367,30 @@ li:hover {
     font-size: 18px;
 }
 
+.last-text {
+    font-family: "assistant", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 20px;
+    margin-right:30px;
+    margin-left: 30px;
+    color: rgb(11, 12, 14);
+}
+
+.credits {
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    font-size: 15px;
+    font-family: "kissing-season", sans-serif;
+    background-color: #f688bfd7;
+    color: #000000;
+    padding: 10px 15px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+.credits:hover {
+    transform: translateY(-10px);
+    box-shadow:0 4px 8px #3a3636;
+}
