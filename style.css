@@ -14,7 +14,12 @@ h1 {
     font-family: "tropiLand", sans-serif;
     font-size: 90px;
     letter-spacing: 12px;
+    transition: color 0.3s ease;
     animation:bounce 1s infinite alternate;
+}
+
+h1:hover {
+    color: rgb(85, 43, 123)
 }
 
 @keyframes bounce {
@@ -257,6 +262,11 @@ h1 {
     margin-left: 50px;
     margin-bottom: 40px;
     margin-top: -20px;
+    transition: all 0.4s ease;
+}
+
+.instructions:hover {
+    color:rgb(96, 14, 66)
 }
 
 .note {
@@ -289,3 +299,71 @@ h1 {
 .strong {
     font-weight: 700;
 }
+
+button.toggle-ideas {
+    display: block;
+    margin: 10px auto;
+    font-family: "perfect", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #000000;
+    border-radius: 90px;
+    cursor: pointer;
+    padding: 6px 12px;  
+    text-decoration: none; 
+    background-color: #994c99ee;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+button.toggle-ideas:hover {
+    background-color: #f8a2f8b9;
+    transform: scale(1.1);
+    box-shadow: 0 4px 6px rgba(35, 35, 35, 0.493);
+}
+
+.ideas {
+    display: none;
+    width: 900px;
+    margin: 15px auto;
+    height: fit-content;
+    background:#f0f8ffbe;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+    line-height: 1.5;
+    text-align: left;
+    position: relative;
+    border: 5px solid #be4c76e2;
+    margin-bottom: 18px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    }
+
+    .ideas:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+li {
+    font-family: "beach", serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: rgb(46, 9, 24);
+    transition: all 0.3s ease;
+    margin-right: 20px;
+    }
+
+li:hover {
+    color: rgb(95, 16, 47);
+    background-color: rgba(243, 173, 183, 0.399);
+}
+@font-face {
+    font-family: "beach";
+    src: url("fonts/Quick\ Beach.ttf") format("truetype");
+}
+
+.melody {
+    font-family: "assistant", sans-serif;
+    font-size: 18px;
+}
+

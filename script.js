@@ -127,3 +127,16 @@ const aleatoryBackground = background[Math.floor(Math.random() * background.leng
 document.body.style.backgroundImage = aleatoryBackground;
 
 
+const buttons = document.querySelectorAll(".toggle-ideas");
+
+buttons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const idea = btn.nextElementSibling;
+
+    if (idea.style.display === "none" || idea.style.display === "") {
+      idea.style.display = "block";
+    } else {
+      idea.style.display = "none";
+    }
+  });
+});
